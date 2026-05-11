@@ -1,0 +1,177 @@
+export default function PosterCompanionSite() {
+  return (
+    <div className="min-h-screen bg-neutral-950 text-neutral-100 font-sans">
+      {/* Hero */}
+      <section className="px-8 py-20 max-w-6xl mx-auto">
+        <p className="uppercase tracking-[0.3em] text-sm text-neutral-400 mb-4">
+          English 13 – Writing as Thinking
+        </p>
+
+        <h1 className="text-5xl md:text-7xl font-bold leading-tight max-w-5xl">
+          Bias to Burden:
+          <br />
+          <span className="text-neutral-400">
+            A Data Ecofeminist Analysis of GenAI and the Global South
+          </span>
+        </h1>
+
+        <p className="mt-8 text-xl text-neutral-300 max-w-3xl leading-relaxed">
+          Generative Artificial Intelligence (GenAI) is often presented as fast, efficient, and intelligent, appearing almost immaterial in its ability to answer questions and generate content. Yet behind every AI prompt lies a vast material system involving energy-intensive data centers, water consumption, raw material extraction, and invisible labor. This project applies Ana Valdivia’s concept of data ecofeminism to examine how GenAI operates not merely as a neutral technological innovation, but as a system deeply embedded in environmental, labor, and geopolitical inequalities.
+        </p>
+
+        <div className="mt-10 flex flex-wrap gap-4 text-sm">
+          <div className="border border-neutral-700 rounded-2xl px-4 py-2">
+            Data Ecofeminism
+          </div>
+          <div className="border border-neutral-700 rounded-2xl px-4 py-2">
+            Generative AI
+          </div>
+          <div className="border border-neutral-700 rounded-2xl px-4 py-2">
+            Global South
+          </div>
+          <div className="border border-neutral-700 rounded-2xl px-4 py-2">
+            Environmental Justice
+          </div>
+        </div>
+      </section>
+
+      {/* Thesis */}
+      <section className="border-y border-neutral-800 bg-neutral-900/40">
+        <div className="max-w-6xl mx-auto px-8 py-16">
+          <h2 className="text-3xl font-semibold mb-6">Thesis Statement</h2>
+
+          <div className="text-2xl leading-relaxed text-neutral-200 max-w-5xl">
+            Generative AI is not only socially biased but materially extractive.
+            Through a data ecofeminist lens, GenAI emerges as a system sustained
+            by unequal labor, environmental exploitation, and corporate power,
+            with the Global South carrying a disproportionate share of its hidden
+            costs.
+          </div>
+        </div>
+      </section>
+
+      {/* Analysis Points */}
+      <section className="max-w-6xl mx-auto px-8 py-20">
+        <h2 className="text-4xl font-bold mb-4">Key Analysis Points</h2>
+
+        <p className="text-neutral-400 max-w-3xl mb-12 leading-relaxed">
+          This analysis shifts the discussion of AI away from outputs alone and
+          toward the infrastructures, labor systems, and unequal global power
+          relations that sustain generative technologies.
+        </p>
+
+        <div className="grid md:grid-cols-3 gap-8">
+          <div className="bg-neutral-900 border border-neutral-800 rounded-3xl p-8 shadow-2xl">
+            <div className="text-5xl mb-6">⚠️</div>
+            <h3 className="text-2xl font-semibold mb-4">
+              Bias Is Structural
+            </h3>
+            <p className="text-neutral-300 leading-relaxed">
+              GenAI systems are trained on massive datasets derived from the internet, absorbing existing social norms, stereotypes, and power relations. Because these systems learn through statistical repetition rather than ethical understanding, they reproduce dominant inequalities involving gender, class, and geopolitical power.
+            </p>
+          </div>
+
+          <div className="bg-neutral-900 border border-neutral-800 rounded-3xl p-8 shadow-2xl">
+            <div className="text-5xl mb-6">🏭</div>
+            <h3 className="text-2xl font-semibold mb-4">
+              The “Cloud” Is Physical
+            </h3>
+            <p className="text-neutral-300 leading-relaxed">
+              The so-called “cloud” depends on physical infrastructures such as data centers, servers, electricity grids, cooling systems, and hardware manufacturing. Research cited in this project shows that GenAI consumes massive amounts of water and energy while relying on continuous extraction of raw materials to sustain its growth.
+            </p>
+          </div>
+
+          <div className="bg-neutral-900 border border-neutral-800 rounded-3xl p-8 shadow-2xl">
+            <div className="text-5xl mb-6">🌍</div>
+            <h3 className="text-2xl font-semibold mb-4">
+              Unequal Global Burdens
+            </h3>
+            <p className="text-neutral-300 leading-relaxed">
+              Although GenAI technologies are largely developed and controlled by corporations in the Global North, much of their environmental damage and invisible labor are displaced onto the Global South. Workers in Africa and Southeast Asia often perform low-paid data labeling and content moderation under exploitative conditions, while poorer regions absorb ecological costs linked to extraction and infrastructure.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Central Visual Flow */}
+      <section className="bg-neutral-900/50 border-y border-neutral-800">
+        <div className="max-w-6xl mx-auto px-8 py-20">
+          <h2 className="text-4xl font-bold mb-4 text-center">
+            The Hidden AI Pipeline
+          </h2>
+
+          <p className="text-center text-neutral-400 max-w-3xl mx-auto mb-14 leading-relaxed">
+            Data ecofeminism challenges the idea that AI is immaterial. Every AI response is connected to hidden systems of extraction involving infrastructure, labor, environmental consumption, and global inequality.
+          </p>
+
+          <div className="flex flex-col md:flex-row items-center justify-between gap-6 text-center">
+            {[
+              'User Prompt',
+              'AI Response',
+              'Data Centers',
+              'Energy + Water',
+              'Mining + Labor',
+              'Global Inequality'
+            ].map((item, idx) => (
+              <div key={idx} className="flex items-center gap-6">
+                <div className="bg-black border border-neutral-700 rounded-2xl px-6 py-5 min-w-[160px] text-lg font-medium">
+                  {item}
+                </div>
+                {idx !== 5 && (
+                  <div className="text-3xl text-neutral-500 hidden md:block">→</div>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Synthesis */}
+      <section className="max-w-5xl mx-auto px-8 py-20 text-center">
+        <h2 className="text-4xl font-bold mb-8">Working Synthesis</h2>
+
+        <p className="text-xl leading-relaxed text-neutral-300">
+          A data ecofeminist perspective reveals that GenAI cannot be understood solely through the outputs it produces. Its harms begin long before a response is generated, embedded within the data it is trained on, the labor that sustains it, and the environmental resources it consumes. Ethical discussions about AI must therefore confront the hidden systems of extraction, labor, and power that make these technologies possible.
+        </p>
+      </section>
+
+      {/* Sources */}
+      <section className="border-t border-neutral-800 bg-black">
+        <div className="max-w-5xl mx-auto px-8 py-16">
+          <h2 className="text-3xl font-bold mb-3">Selected References</h2>
+
+          <p className="text-neutral-400 mb-8 leading-relaxed">
+            Key academic and journalistic sources informing this analysis.
+          </p>
+
+          <div className="space-y-6 text-neutral-300 leading-relaxed">
+            <p>
+              De Vries-Gao, Alex. “The Carbon and Water Footprints of Data
+              Centers and What This Could Mean for Artificial Intelligence.”
+              <i> Patterns</i>, vol. 7, no. 1, Dec. 2025.
+            </p>
+
+            <p>
+              Hlabisa, Sibongiseni. “The Ecology of Artificial Intelligence:
+              Energy, Water, Materials, and Land Limits of Digital Systems.”
+              <i> Carbon Neutral Systems</i>, vol. 1, no. 1, Dec. 2025.
+            </p>
+
+            <p>
+              Okolo, Chinasa T. “Reimagining the Future of Data and AI Labor in
+              the Global South.” <i>Brookings</i>, 7 Oct. 2025.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="px-8 py-10 text-center text-neutral-500 text-sm">
+        Marc Emanuel N. Dela Paz • English 13 WFR • 2026
+        <div className="mt-3 text-neutral-600">
+          Poster Companion Site • Data Ecofeminism and Generative AI
+        </div>
+      </footer>
+    </div>
+  )
+}
