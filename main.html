@@ -1,177 +1,255 @@
-export default function PosterCompanionSite() {
-  return (
-    <div className="min-h-screen bg-neutral-950 text-neutral-100 font-sans">
-      {/* Hero */}
-      <section className="px-8 py-20 max-w-6xl mx-auto">
-        <p className="uppercase tracking-[0.3em] text-sm text-neutral-400 mb-4">
-          English 13 – Writing as Thinking
-        </p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bias to Burden — Data Ecofeminism & GenAI</title>
+<link href="style.css" rel="stylesheet">
+</head>
+<body>
 
-        <h1 className="text-5xl md:text-7xl font-bold leading-tight max-w-5xl">
-          Bias to Burden:
-          <br />
-          <span className="text-neutral-400">
-            A Data Ecofeminist Analysis of GenAI and the Global South
-          </span>
-        </h1>
+<canvas id="stars-canvas"></canvas>
 
-        <p className="mt-8 text-xl text-neutral-300 max-w-3xl leading-relaxed">
-          Generative Artificial Intelligence (GenAI) is often presented as fast, efficient, and intelligent, appearing almost immaterial in its ability to answer questions and generate content. Yet behind every AI prompt lies a vast material system involving energy-intensive data centers, water consumption, raw material extraction, and invisible labor. This project applies Ana Valdivia’s concept of data ecofeminism to examine how GenAI operates not merely as a neutral technological innovation, but as a system deeply embedded in environmental, labor, and geopolitical inequalities.
-        </p>
+<div class="site">
 
-        <div className="mt-10 flex flex-wrap gap-4 text-sm">
-          <div className="border border-neutral-700 rounded-2xl px-4 py-2">
-            Data Ecofeminism
-          </div>
-          <div className="border border-neutral-700 rounded-2xl px-4 py-2">
-            Generative AI
-          </div>
-          <div className="border border-neutral-700 rounded-2xl px-4 py-2">
-            Global South
-          </div>
-          <div className="border border-neutral-700 rounded-2xl px-4 py-2">
-            Environmental Justice
-          </div>
-        </div>
-      </section>
-
-      {/* Thesis */}
-      <section className="border-y border-neutral-800 bg-neutral-900/40">
-        <div className="max-w-6xl mx-auto px-8 py-16">
-          <h2 className="text-3xl font-semibold mb-6">Thesis Statement</h2>
-
-          <div className="text-2xl leading-relaxed text-neutral-200 max-w-5xl">
-            Generative AI is not only socially biased but materially extractive.
-            Through a data ecofeminist lens, GenAI emerges as a system sustained
-            by unequal labor, environmental exploitation, and corporate power,
-            with the Global South carrying a disproportionate share of its hidden
-            costs.
-          </div>
-        </div>
-      </section>
-
-      {/* Analysis Points */}
-      <section className="max-w-6xl mx-auto px-8 py-20">
-        <h2 className="text-4xl font-bold mb-4">Key Analysis Points</h2>
-
-        <p className="text-neutral-400 max-w-3xl mb-12 leading-relaxed">
-          This analysis shifts the discussion of AI away from outputs alone and
-          toward the infrastructures, labor systems, and unequal global power
-          relations that sustain generative technologies.
-        </p>
-
-        <div className="grid md:grid-cols-3 gap-8">
-          <div className="bg-neutral-900 border border-neutral-800 rounded-3xl p-8 shadow-2xl">
-            <div className="text-5xl mb-6">⚠️</div>
-            <h3 className="text-2xl font-semibold mb-4">
-              Bias Is Structural
-            </h3>
-            <p className="text-neutral-300 leading-relaxed">
-              GenAI systems are trained on massive datasets derived from the internet, absorbing existing social norms, stereotypes, and power relations. Because these systems learn through statistical repetition rather than ethical understanding, they reproduce dominant inequalities involving gender, class, and geopolitical power.
-            </p>
-          </div>
-
-          <div className="bg-neutral-900 border border-neutral-800 rounded-3xl p-8 shadow-2xl">
-            <div className="text-5xl mb-6">🏭</div>
-            <h3 className="text-2xl font-semibold mb-4">
-              The “Cloud” Is Physical
-            </h3>
-            <p className="text-neutral-300 leading-relaxed">
-              The so-called “cloud” depends on physical infrastructures such as data centers, servers, electricity grids, cooling systems, and hardware manufacturing. Research cited in this project shows that GenAI consumes massive amounts of water and energy while relying on continuous extraction of raw materials to sustain its growth.
-            </p>
-          </div>
-
-          <div className="bg-neutral-900 border border-neutral-800 rounded-3xl p-8 shadow-2xl">
-            <div className="text-5xl mb-6">🌍</div>
-            <h3 className="text-2xl font-semibold mb-4">
-              Unequal Global Burdens
-            </h3>
-            <p className="text-neutral-300 leading-relaxed">
-              Although GenAI technologies are largely developed and controlled by corporations in the Global North, much of their environmental damage and invisible labor are displaced onto the Global South. Workers in Africa and Southeast Asia often perform low-paid data labeling and content moderation under exploitative conditions, while poorer regions absorb ecological costs linked to extraction and infrastructure.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Central Visual Flow */}
-      <section className="bg-neutral-900/50 border-y border-neutral-800">
-        <div className="max-w-6xl mx-auto px-8 py-20">
-          <h2 className="text-4xl font-bold mb-4 text-center">
-            The Hidden AI Pipeline
-          </h2>
-
-          <p className="text-center text-neutral-400 max-w-3xl mx-auto mb-14 leading-relaxed">
-            Data ecofeminism challenges the idea that AI is immaterial. Every AI response is connected to hidden systems of extraction involving infrastructure, labor, environmental consumption, and global inequality.
-          </p>
-
-          <div className="flex flex-col md:flex-row items-center justify-between gap-6 text-center">
-            {[
-              'User Prompt',
-              'AI Response',
-              'Data Centers',
-              'Energy + Water',
-              'Mining + Labor',
-              'Global Inequality'
-            ].map((item, idx) => (
-              <div key={idx} className="flex items-center gap-6">
-                <div className="bg-black border border-neutral-700 rounded-2xl px-6 py-5 min-w-[160px] text-lg font-medium">
-                  {item}
-                </div>
-                {idx !== 5 && (
-                  <div className="text-3xl text-neutral-500 hidden md:block">→</div>
-                )}
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Synthesis */}
-      <section className="max-w-5xl mx-auto px-8 py-20 text-center">
-        <h2 className="text-4xl font-bold mb-8">Working Synthesis</h2>
-
-        <p className="text-xl leading-relaxed text-neutral-300">
-          A data ecofeminist perspective reveals that GenAI cannot be understood solely through the outputs it produces. Its harms begin long before a response is generated, embedded within the data it is trained on, the labor that sustains it, and the environmental resources it consumes. Ethical discussions about AI must therefore confront the hidden systems of extraction, labor, and power that make these technologies possible.
-        </p>
-      </section>
-
-      {/* Sources */}
-      <section className="border-t border-neutral-800 bg-black">
-        <div className="max-w-5xl mx-auto px-8 py-16">
-          <h2 className="text-3xl font-bold mb-3">Selected References</h2>
-
-          <p className="text-neutral-400 mb-8 leading-relaxed">
-            Key academic and journalistic sources informing this analysis.
-          </p>
-
-          <div className="space-y-6 text-neutral-300 leading-relaxed">
-            <p>
-              De Vries-Gao, Alex. “The Carbon and Water Footprints of Data
-              Centers and What This Could Mean for Artificial Intelligence.”
-              <i> Patterns</i>, vol. 7, no. 1, Dec. 2025.
-            </p>
-
-            <p>
-              Hlabisa, Sibongiseni. “The Ecology of Artificial Intelligence:
-              Energy, Water, Materials, and Land Limits of Digital Systems.”
-              <i> Carbon Neutral Systems</i>, vol. 1, no. 1, Dec. 2025.
-            </p>
-
-            <p>
-              Okolo, Chinasa T. “Reimagining the Future of Data and AI Labor in
-              the Global South.” <i>Brookings</i>, 7 Oct. 2025.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Footer */}
-      <footer className="px-8 py-10 text-center text-neutral-500 text-sm">
-        Marc Emanuel N. Dela Paz • English 13 WFR • 2026
-        <div className="mt-3 text-neutral-600">
-          Poster Companion Site • Data Ecofeminism and Generative AI
-        </div>
-      </footer>
+  <!-- HERO -->
+  <header class="hero" id="top">
+    <div class="hero-glow"></div>
+    <p class="hero-eyebrow">English 13 WFR · Marc Emanuel N. Dela Paz</p>
+    <h1 class="hero-title">
+      <span class="line1">Bias to Burden:</span>
+      <span class="line2">A Data Ecofeminist Analysis of GenAI &amp; the Global South</span>
+    </h1>
+    <p class="hero-meta">
+      Object of Study — Ana Valdivia's <em>"Data Ecofeminism"</em>
+    </p>
+    <div class="hero-thesis">
+      <p>GenAI is not only biased in its outputs but is also built on extractive systems that rely on unequal labor and resource use, with the Global South carrying most of the environmental and social burdens.</p>
     </div>
-  )
-}
+  </header>
+
+  <!-- NAV -->
+  <nav>
+    <a href="#intro">Introduction</a>
+    <a href="#power">AI Control &amp; Bias</a>
+    <a href="#environment">Environment</a>
+    <a href="#labor">Labor</a>
+    <a href="#colonialism">Colonialism</a>
+    <a href="#conclusion">Conclusion</a>
+    <a href="#references">References</a>
+  </nav>
+
+  <!-- INTRODUCTION -->
+  <section class="section" id="intro">
+    <div class="section-label">01 — Introduction</div>
+    <h2 class="section-heading">The Illusion of Immateriality</h2>
+    <div class="glow-rule"></div>
+    <div class="body-text">
+      <p>Generative Artificial Intelligence, also known as GenAI, is often presented as a fast, efficient, and intelligent solution for everyday problems. The technology appears seamless and almost immaterial for its ability to answer questions and generate content. But what many do not see is that this perception hides the complex systems that make these technologies possible.</p>
+      <p>Behind the convenience of GenAI are massive datasets, energy-intensive facilities, water consumption, material mining, and layers of invisible labor.</p>
+    </div>
+    <div class="callout cyan">
+      <p>Ana Valdivia's "Data Ecofeminism" challenges this illusion by reframing GenAI not only as a technological innovation but as a system deeply embedded in social and environmental inequalities — sustained by extractive practices affecting both people and the planet.</p>
+    </div>
+    <div class="body-text">
+      <p>Recent research further supports this view, showing that AI systems depend on interconnected resource systems involving energy, water, materials, and land rather than isolated digital processes (Hlabisa).</p>
+    </div>
+
+    <div class="pillars">
+      <div class="pillar">
+        <div class="pillar-num">01</div>
+        <div class="pillar-title">Bias is Structural</div>
+        <p>GenAI reproduces dominant social hierarchies because it learns from datasets shaped by existing inequalities involving gender, class, and power.</p>
+      </div>
+      <div class="pillar">
+        <div class="pillar-num">02</div>
+        <div class="pillar-title">Extractive Infrastructure</div>
+        <p>Behind the illusion of "cloud" technology are data centers, water consumption, electricity demand, mining, and hardware production.</p>
+      </div>
+      <div class="pillar">
+        <div class="pillar-num">03</div>
+        <div class="pillar-title">Global South Bears the Cost</div>
+        <p>While GenAI is largely controlled by corporations in the Global North, its labor exploitation and environmental burden is displaced onto poorer regions.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- POWER & BIAS -->
+  <section class="section" id="power">
+    <div class="section-label">02 — Power &amp; Bias</div>
+    <h2 class="section-heading">How Power Enters the <em>System</em></h2>
+    <div class="glow-rule"></div>
+    <div class="body-text">
+      <p>A key argument of Valdivia's framework is that GenAI systems are shaped by existing social, political, and economic power structures rather than operating as neutral tools. Because these systems are trained on vast datasets derived from the internet, they absorb existing social norms, stereotypes, and power relations.</p>
+      <p>As GenAI learns by identifying statistical patterns, it does not distinguish between neutral information and biased representation. Instead, it treats repeated associations — such as linking women to caregiving roles — as probable truths. Over time, these patterns become embedded into the model itself, allowing it to reproduce and even amplify them in its output.</p>
+    </div>
+
+    <div class="callout">
+      <p>Bias in GenAI is not accidental — it is a structural feature of how the system is built and trained. Any attempt to "fix" the bias through simple technical adjustments is insufficient, as the problem is rooted in the broader systems that produce and organize data.</p>
+    </div>
+
+    <div class="body-text">
+      <p>The view aligns with broader feminist critiques of knowledge production: data is not objective but socially constructed. Valdivia extends this by arguing that GenAI systems inherit inequalities present in training data — gender, class, and geopolitical hierarchies included.</p>
+      <p>Valdivia emphasized that the development of GenAI is tied to corporate and patriarchal power. Large technology corporations control the data, infrastructure, and deployment of AI systems, shaping them according to profit-driven priorities. This concentration of power reinforces inequality by privileging certain voices and perspectives while marginalizing others.</p>
+    </div>
+
+    <div class="pull-quote">
+      <blockquote>
+        GenAI does not only reflect society — it participates in echoing whose knowledge and perspective are prioritized.
+      </blockquote>
+      <cite>— synthesis of Valdivia's Data Ecofeminism framework</cite>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ENVIRONMENT -->
+  <section class="section" id="environment">
+    <div class="section-label">03 — Environment</div>
+    <h2 class="section-heading">The Material Cost of <em>"Cloud"</em> Technology</h2>
+    <div class="glow-rule"></div>
+    <div class="body-text">
+      <p>A central point of Valdivia is the concept of data ecofeminism, which builds on ecofeminist theory by linking gender inequality with environmental exploitation. This framework challenges the assumption of GenAI being harmlessly "cloud-based" or immaterial. In reality, GenAI depends on vast physical structures such as data centers, servers, and global supply chains.</p>
+      <p>These infrastructures consume large amounts of water and energy while requiring continuous extraction of raw materials to keep GenAI running. A study by De Vries-Gao showed that AI — especially GenAI — is a major driver of global electricity demand and resource consumption through data centers, challenging the assumption that digital technologies are environmentally neutral.</p>
+    </div>
+
+    <div class="stats-row">
+      <div class="stat-block">
+        <span class="stat-number">$25B</span>
+        <div class="stat-label">Estimated environmental damage linked to US data centers (Collins, 2026)</div>
+      </div>
+      <div class="stat-block">
+        <span class="stat-number">Bn m³</span>
+        <div class="stat-label">Projected global AI water consumption in coming years (Barnett-Itzhaki, 2026)</div>
+      </div>
+      <div class="stat-block">
+        <span class="stat-number">∞</span>
+        <div class="stat-label">Footprint extends beyond computation to hardware production &amp; infrastructure (D'Orgeval et al., 2025)</div>
+      </div>
+    </div>
+
+    <div class="body-text">
+      <p>GenAI systems require freshwater for cooling, electricity generation, and hardware manufacturing. Similarly, D'Orgeval and other researchers argued that GenAI's environmental footprint extends beyond computations to include hardware production and infrastructure development.</p>
+      <p>Data centers supporting GenAI have been linked to environmental damage costing billions of dollars and increasing pollution in surrounding communities. These impacts show that the environmental costs of GenAI are not minor side effects, but central to its operation.</p>
+    </div>
+
+    <div class="callout pink">
+      <p>By emphasizing material impacts, data ecofeminism shifts the discussion from representation to infrastructure. GenAI must be understood not only in terms of what it produces, but also what it consumes — and these costs are distributed through global inequality.</p>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- LABOR -->
+  <section class="section" id="labor">
+    <div class="section-label">04 — Labor</div>
+    <h2 class="section-heading">The <em>Invisible</em> Labor Behind Artificial Intelligence</h2>
+    <div class="glow-rule"></div>
+    <div class="body-text">
+      <p>A crucial aspect of Valdivia's analysis is the uneven distribution of GenAI's costs. While GenAI technologies are largely developed and controlled by companies in the Global North, their environmental and social burdens are disproportionately experienced by the Global South.</p>
+      <p>The labor behind GenAI is frequently outsourced to workers in the Global South. Research shows that GenAI systems rely on the "invisible labor of data workers," many of whom are located in regions such as Africa and Southeast Asia (Okolo). These workers perform essential tasks such as data labelling, content moderation, and dataset curation — essential to training and maintaining GenAI systems.</p>
+    </div>
+
+    <div class="callout">
+      <p>Okolo describes these workplaces as "digital sweatshops," where workers endure long hours, low pay, and exposure to disturbing or harmful content with little protection or recognition.</p>
+    </div>
+
+    <div class="body-text">
+      <p>Journalistic investigations by Cheah reveal similar findings: these workers are paid extremely low wages and are exposed to traumatic content for GenAI training, highlighting the human cost hidden behind automated technologies.</p>
+    </div>
+
+    <div class="pull-quote">
+      <blockquote>
+        The intelligence of GenAI is not purely artificial — it is partially constructed through outsourced human labor that remains deliberately obscured from users.
+      </blockquote>
+      <cite>— analysis of Valdivia's framework &amp; Okolo's research</cite>
+    </div>
+
+    <div class="body-text">
+      <p>This invisibility allows companies to market GenAI as efficient and scalable, while concealing the human cost required to sustain it. While the technology is presented as autonomous and intelligent, it is in fact dependent on continuous human intervention. This contradiction is central to understanding GenAI's actual operation.</p>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- COLONIALISM -->
+  <section class="section" id="colonialism">
+    <div class="section-label">05 — Colonial Patterns</div>
+    <h2 class="section-heading">Digital Colonialism &amp; <em>Global Inequality</em></h2>
+    <div class="glow-rule"></div>
+    <div class="body-text">
+      <p>The pattern of outsourced and undervalued labor is not new. This practice reflects a longer history of colonial extraction in which wealthier regions benefit from the labor and resources of poorer ones. The inequalities experienced by the Global South are tied to historical patterns of colonialism.</p>
+    </div>
+
+    <div class="thread-box">
+      <div class="thread-col">
+        <div class="thread-label">Historical Pattern</div>
+        <p>Extraction of resources and labor from the Global South for the benefit of more powerful countries in the North, creating persistent economic hierarchies.</p>
+      </div>
+      <div class="thread-col">
+        <div class="thread-label">Digital Continuation</div>
+        <p>GenAI continues rather than disrupts existing global hierarchies. The Global South becomes the site where environmental and social costs are displaced, while the Global North captures most of the benefits.</p>
+      </div>
+    </div>
+
+    <div class="body-text">
+      <p>Hlabisa's research further showed that GenAI's ecological footprint is spatially uneven — benefits are concentrated in technologically advanced regions while costs are externalized elsewhere.</p>
+      <p>Data ecofeminism reveals that GenAI's harms are global but unequal. Together, these findings demonstrate that GenAI depends on a global labor structure in which human work is undervalued, outsourced, and obscured — reinforcing existing inequalities between the Global North and the Global South.</p>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- CONCLUSION -->
+  <div class="accent-section">
+    <section class="section" id="conclusion" style="padding: 0;">
+      <div class="section-label">06 — Conclusion</div>
+      <h2 class="section-heading">Confronting the <em>Hidden Systems</em> That Sustain GenAI</h2>
+      <div class="glow-rule"></div>
+      <div class="body-text">
+        <p>Valdivia's Data Ecofeminism reveals that GenAI cannot be understood or evaluated as a neutral technological system. This paper has shown that GenAI is shaped by powerful relations rather than neutrality, relying on biased datasets and corporate control. It has demonstrated that these systems rely on material infrastructures that consume significant environmental resources — energy, water, and raw materials. Most importantly, these costs are not evenly distributed.</p>
+        <p>The Global South bears a disproportionate share of the environmental and social burdens associated with GenAI, which reflects broader patterns of global inequality. Rather than existing as a purely digital or automated innovation, GenAI is embedded within systems of inequality that connect gender bias, environmental exploitation, and global labor dynamics.</p>
+      </div>
+
+      <div class="callout cyan">
+        <p>A data ecofeminist analysis makes it clear that focusing solely on GenAI outputs is insufficient. The harms of GenAI begin long before a response is generated — found in the data it is trained on, the labor that sustains it, and the resources it consumes. The central question shifts from whether GenAI is biased to how its entire system of production is structured and who ultimately benefits.</p>
+      </div>
+
+      <div class="body-text">
+        <p>If GenAI continues to be developed without addressing these structural inequalities, it risks enforcing the very systems of domination it is often assumed to transcend and go beyond. A more ethical approach to GenAI, therefore, requires not only improving its outputs but also confronting the hidden systems of extraction, labor, and power that sustain it.</p>
+      </div>
+    </section>
+  </div>
+
+  <!-- REFERENCES -->
+  <section class="references" id="references">
+    <div class="section-label">Works Cited</div>
+    <h2 class="section-heading" style="font-size:1.3rem;">References</h2>
+    <div class="glow-rule"></div>
+    <ul class="ref-list">
+      <li>Barnett-Itzhaki, Zohar. "The Water Footprint of Artificial Intelligence: Emerging Solutions and Governance Imperatives." <em>Water Research</em>, vol. 299, Apr. 2026, p. 125866. ScienceDirect, <a href="https://doi.org/10.1016/j.watres.2026.125866" target="_blank">https://doi.org/10.1016/j.watres.2026.125866</a>.</li>
+      <li>Cheah, Zac. "AI's invisible labor is tech's biggest blind spot." <em>TechRadar</em>, 19 Aug. 2025, <a href="https://www.techradar.com/pro/ais-invisible-labor-is-techs-biggest-blind-spot" target="_blank">www.techradar.com/pro/ais-invisible-labor-is-techs-biggest-blind-spot</a>.</li>
+      <li>Collins, Benedict. "Prompts Now, Pollutants Later: Report Claims Data Centers Are Harming the Environment to the Tune of $25 Billion..." <em>TechRadar</em>, 29 Apr. 2026, <a href="https://www.techradar.com/pro/prompts-now-pollutants-later-report-claims-data-centers-are-harming-the-environment-to-the-tune-of-usd25-billion-and-inducing-a-debt-on-the-health-of-current-and-future-generations" target="_blank">www.techradar.com/pro/...</a>.</li>
+      <li>De Vries-Gao, Alex. "The Carbon and Water Footprints of Data Centers and What This Could Mean for Artificial Intelligence." <em>Patterns</em>, vol. 7, no. 1, Dec. 2025, p. 101430. ScienceDirect, <a href="https://doi.org/10.1016/j.patter.2025.101430" target="_blank">https://doi.org/10.1016/j.patter.2025.101430</a>.</li>
+      <li>D'Orgeval, Alexandre, et al. "Generative AI Impact Assessment Through a Life Cycle Analysis of Multiple Data Center Typologies." <em>Applied Energy</em>, vol. 406, Dec. 2025, p. 127288. ScienceDirect, <a href="https://doi.org/10.1016/j.apenergy.2025.127288" target="_blank">https://doi.org/10.1016/j.apenergy.2025.127288</a>.</li>
+      <li>Hlabisa, Sibongiseni. "The Ecology of Artificial Intelligence: Energy, Water, Materials, and Land Limits of Digital Systems." <em>Carbon Neutral Systems</em>, vol. 1, no. 1, Dec. 2025. Springer Nature, <a href="https://doi.org/10.1007/s44438-025-00018-8" target="_blank">https://doi.org/10.1007/s44438-025-00018-8</a>.</li>
+      <li>Okolo, Chinasa T. "Reimagining the Future of Data and AI Labor in the Global South." <em>Brookings</em>, 7 Oct. 2025, <a href="https://www.brookings.edu/articles/reimagining-the-future-of-data-and-ai-labor-in-the-global-south" target="_blank">www.brookings.edu/articles/reimagining-the-future-of-data-and-ai-labor-in-the-global-south</a>.</li>
+    </ul>
+  </section>
+
+  <footer>
+    <span>Marc Emanuel N. Dela Paz</span> | <a
+  href="https://github.com/yourusername/yourrepo"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="text-neutral-400 hover:text-white transition underline underline-offset-4"
+>
+  View Source on GitHub →
+</a>
+  </footer>
+<script src="script.js"></script>
+</div>
+</body>
+</html>
